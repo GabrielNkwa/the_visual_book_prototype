@@ -67,67 +67,11 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     Navigator.push(
-      //       context,
-      //       MaterialPageRoute(builder: (context) => PageThree()),
-      //     );
-      //   },
-      //   child: Icon(Icons.add),
-      // ),
+   
     );
   }
 }
 
-// class HomeScreen extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           Text('My Visual Book'),
-//           SizedBox(height: 20),
-//           ElevatedButton(
-//             onPressed: () {
-//               Navigator.push(
-//                 context,
-//                 MaterialPageRoute(builder: (context) => BookSetup()),
-//               );
-//             },
-//             child: Text('BOOK SETUP'),
-//           ),
-//           SizedBox(height: 20),
-//           ElevatedButton(
-//             onPressed: () {
-//               Navigator.push(
-//                 context,
-//                 MaterialPageRoute(builder: (context) => GiftSetup()),
-//               );
-//             },
-//             child: Text('GIFT SETUP'),
-//           ),
-//           SizedBox(height: 20),
-//           ElevatedButton(
-//             onPressed: () {},
-//             child: Text('MEDIA EDITOR'),
-//           ),
-//           SizedBox(height: 20),
-//           ElevatedButton(
-//             onPressed: () {},
-//             child: Text('HELP'),
-//           ),
-//           SizedBox(height: 20),
-//           ElevatedButton(
-//             onPressed: () {},
-//             child: Text('SHOP'),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
 
 class Books extends StatelessWidget {
   @override
