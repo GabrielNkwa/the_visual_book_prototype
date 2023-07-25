@@ -19,6 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          scaffoldBackgroundColor: Color.fromARGB(255, 214, 211, 203)),
       home: SignInScreen(),
     );
   }
@@ -67,11 +70,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-   
     );
   }
 }
-
 
 class Books extends StatelessWidget {
   @override
@@ -93,13 +94,15 @@ class Books extends StatelessWidget {
 }
 
 class Settings extends StatelessWidget {
+  final users = FirebaseAuth.instance.currentUser;
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('USER'),
+          Text('${users?.email}'),
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {},

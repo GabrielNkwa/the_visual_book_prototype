@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:the_visiual_book/main.dart';
 import 'package:the_visiual_book/screens/signin_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../pages/books_setup.dart';
 import '../pages/gift_setup.dart';
@@ -12,6 +14,8 @@ class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
+
+final websiteUri = Uri.parse('https://thevisualbook.com/collections/all');
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
@@ -55,7 +59,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -95,7 +104,12 @@ class Home extends StatelessWidget {
           ),
           SizedBox(height: 20),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => setState(() {
+              launchUrl(
+                websiteUri,
+                mode: LaunchMode.inAppWebView,
+              );
+            }),
             child: Text('SHOP'),
           ),
         ],
